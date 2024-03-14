@@ -1,8 +1,7 @@
-INFO - 14/03/2024 10:21:58 PM: Start app.
-INFO - 14/03/2024 10:22:26 PM: 1 of 5 - 01 - Shine On You Crazy Diamond Parts 1–5
-INFO - 14/03/2024 10:22:35 PM: 2 of 5 - 02 - Signs Of Life
-INFO - 14/03/2024 10:22:48 PM: 3 of 5 - 03 - Learning To Fly
-INFO - 14/03/2024 10:23:03 PM: 4 of 5 - 04 - Yet Another Movie
-INFO - 14/03/2024 10:23:04 PM: 5 of 5 - 05 - Round And Round
-INFO - 14/03/2024 10:23:04 PM: Conversion from the "D:/Music/TEST/test1" folder is done. Executed: 5, Unfulfilled (with errors): 0
-INFO - 14/03/2024 10:23:04 PM: Finish app.
+INFO - 14/03/2024 11:21:52 PM: Start app.
+INFO - 14/03/2024 11:22:21 PM: 1 of 4 - 01 - Shine On You Crazy Diamond Parts 1–5
+INFO - 14/03/2024 11:22:30 PM: 2 of 4 - 02 - Signs Of Life
+INFO - 14/03/2024 11:22:43 PM: 3 of 4 - 03 - Learning To Fly
+ERROR - 14/03/2024 11:22:43 PM: Wrong format type.. Expected format - "flac", received format - "mp3". 4 of 4. Sting-Brand New Day
+INFO - 14/03/2024 11:22:43 PM: Conversion from the "D:/ֿנמדנאללû/Converter/Converter/TEST/test1" folder is done. Executed: 3, Unfulfilled (with errors): 1
+INFO - 14/03/2024 11:22:43 PM: Finish app.

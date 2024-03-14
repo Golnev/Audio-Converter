@@ -22,7 +22,15 @@ def directory_already_exist_log(dir_name: str, message: str):
     logger.error(f'"{dir_name}" - {message}')
 
 
+def empty_folder_log(dir_name: str, message: str):
+    logger.error(f'"{dir_name}" - {message}')
+
+
 def wrong_format_type_log(expected_format: str, received_format: str, message: str, other_description=''):
     logger.error(
         f'{message}. Expected format - "{expected_format}", received format - "{received_format}". {other_description}'
     )
+
+
+def equal_format_type_log(message: str):
+    logger.error(f'{message}')

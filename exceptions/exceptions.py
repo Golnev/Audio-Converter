@@ -16,9 +16,32 @@ class DirectoryAlreadyExistException(DirectoryException):
         self.message = message
 
 
+class EmptyDirectoryException(DirectoryException):
+    """Class for empty directory"""
+
+    def __init__(self, head='Empty Directory', message='Directory is empty.'):
+        super().__init__()
+        self.head = head
+        self.message = message
+
+
 class FormatException(Exception):
     """Class for wrong format type"""
-    def __init__(self, head='Format', message='Wrong format type'):
+    def __init__(self, head='Format', message=''):
+        super().__init__()
+        self.head = head
+        self.message = message
+
+
+class WrongFormatException(FormatException):
+    def __init__(self, head='Wrong format', message='Wrong format type.'):
+        super().__init__()
+        self.head = head
+        self.message = message
+
+
+class EqualFormatTypesException(FormatException):
+    def __init__(self, head='Equal format', message='Equal format types.'):
         super().__init__()
         self.head = head
         self.message = message

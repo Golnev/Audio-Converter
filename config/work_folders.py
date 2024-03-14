@@ -13,3 +13,7 @@ def make_dir(in_path, out_path):
         os.makedirs(out_path)
     else:
         raise DirectoryAlreadyExistException()
+
+
+def remove_dir(path):
+    os.rmdir(path)
