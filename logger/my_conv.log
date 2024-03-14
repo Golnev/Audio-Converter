@@ -1,5 +1,8 @@
-INFO - 14/03/2024 09:49:59 PM: Start app.
-ERROR - 14/03/2024 09:49:59 PM: Wrong format type. Expected format - "flac", received format - "". 1 of 0. test1
-ERROR - 14/03/2024 09:49:59 PM: Wrong format type. Expected format - "flac", received format - "". 2 of 0. test2
-INFO - 14/03/2024 09:49:59 PM: Conversion from the "D:/Music/TEST" folder is done. Executed: 0, Unfulfilled (with errors): 2
-INFO - 14/03/2024 09:49:59 PM: Finish app.
+INFO - 14/03/2024 10:21:58 PM: Start app.
+INFO - 14/03/2024 10:22:26 PM: 1 of 5 - 01 - Shine On You Crazy Diamond Parts 1–5
+INFO - 14/03/2024 10:22:35 PM: 2 of 5 - 02 - Signs Of Life
+INFO - 14/03/2024 10:22:48 PM: 3 of 5 - 03 - Learning To Fly
+INFO - 14/03/2024 10:23:03 PM: 4 of 5 - 04 - Yet Another Movie
+INFO - 14/03/2024 10:23:04 PM: 5 of 5 - 05 - Round And Round
+INFO - 14/03/2024 10:23:04 PM: Conversion from the "D:/Music/TEST/test1" folder is done. Executed: 5, Unfulfilled (with errors): 0
+INFO - 14/03/2024 10:23:04 PM: Finish app.
