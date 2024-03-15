@@ -1,5 +1,4 @@
 import os
-from typing import Literal
 
 from pydub import AudioSegment
 
@@ -7,24 +6,32 @@ import logger.logging_config as log
 from config.work_folders import remove_dir
 from exceptions.exceptions import EqualFormatTypesException, WrongFormatException, EmptyDirectoryException
 
-type_formats = Literal['wav', 'mp3', 'aiff', 'flac', 'ogg', 'aac', 'm4a', 'wma', 'au', 'opus']
+type_formats = ['wav', 'mp3', 'aiff', 'flac', 'ogg', 'aac', 'm4a', 'wma', 'au', 'opus']
 
 
 def converter(input_path: str,
               output_path: str,
-              format_from: type_formats,
-              format_to: type_formats,
+              format_from: str,
+              format_to: str,
               file_len: int) -> None:
     count = 0
     with_errors = 0
     executed = 0
+
+    print(format_from, format_to)
+
+    try:
+        if format_from or format_to not in type_formats:
+            raise WrongFormatException
+    except WrongFormatException as e:
+        log.wrong_format_main(e.message)
 
     try:
         if not file_len:
             raise EmptyDirectoryException
     except EmptyDirectoryException as e:
         remove_dir(output_path)
-        log.empty_folder_log(os.path.dirname(input_path), e.message)
+        log.empty_folder_log(input_path, e.message)
         return
 
     try:
