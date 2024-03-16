@@ -1,6 +1,6 @@
 import os
 
-from exceptions.exceptions import DirectoryAlreadyExistException
+from src.exceptions.exceptions import DirectoryAlreadyExistException
 
 
 def make_dir(in_path, out_path):

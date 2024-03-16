@@ -6,7 +6,7 @@ logger.setLevel(logging.INFO)
 
 formatter = logging.Formatter('%(levelname)s - %(asctime)s: %(message)s', datefmt='%d/%m/%Y %I:%M:%S %p')
 
-file_handler = WatchedFileHandler('logger/my_conv.log', mode='w')
+file_handler = WatchedFileHandler('src/logger/my_conv.log', mode='w')
 file_handler.setLevel(logging.INFO)
 file_handler.setFormatter(formatter)
 
