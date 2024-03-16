@@ -1,9 +1,9 @@
 import os
 
-from src.config.find_folder import out_folder, len_folder, find_folder
+from src.work_dirs.find_folder import out_folder, len_folder, find_folder
 from src.exceptions.exceptions import DirectoryAlreadyExistException
 import src.logger.logging_config as log
-from src.config.work_folders import make_dir
+from src.work_dirs.work_folders import make_dir
 from src.convert import converter
 from src.parser import parse_arguments
 

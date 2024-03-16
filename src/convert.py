@@ -3,7 +3,7 @@ import os
 from pydub import AudioSegment
 
 import src.logger.logging_config as log
-from src.config.work_folders import remove_dir
+from src.work_dirs.work_folders import remove_dir
 from src.exceptions.exceptions import EqualFormatTypesException, WrongFormatException, EmptyDirectoryException
 
 type_formats = ['wav', 'mp3', 'aiff', 'flac', 'ogg', 'aac', 'm4a', 'wma', 'au', 'opus']
@@ -19,7 +19,7 @@ def converter(input_path: str,
     executed = 0
 
     try:
-        if format_from or format_to not in type_formats:
+        if format_from not in type_formats or format_to not in type_formats:
             raise WrongFormatException
     except WrongFormatException as e:
         log.wrong_format_main(e.message)
