@@ -1,4 +1,3 @@
-import argparse
 import os
 
 from config.find_folder import out_folder, len_folder, find_folder
@@ -6,14 +5,11 @@ from exceptions.exceptions import DirectoryAlreadyExistException
 import logger.logging_config as log
 from config.work_folders import make_dir
 from src.convert import converter
+from src.parser import parse_arguments
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Audio Converter')
-    parser.add_argument('--input_format', '-inp', help='Enter what format to convert from.')
-    parser.add_argument('--output_format', '-out', help='Enter what format to convert to.')
-    parser.add_argument('--from_directory', '-fd', help='Enter the directory to convert from.')
-    args = parser.parse_args()
+    args = parse_arguments()
 
     if args.from_directory:
         input_path = args.from_directory
