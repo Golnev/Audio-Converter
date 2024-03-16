@@ -1,7 +1,8 @@
-INFO - 16/03/2024 11:01:58 AM: Start app.
-ERROR - 16/03/2024 11:01:58 AM: Wrong format type.. Expected format - "mp3", received format - "flac". 1 of 4. 01 - Shine On You Crazy Diamond Parts 1–5
-ERROR - 16/03/2024 11:01:58 AM: Wrong format type.. Expected format - "mp3", received format - "flac". 2 of 4. 02 - Signs Of Life
-ERROR - 16/03/2024 11:01:58 AM: Wrong format type.. Expected format - "mp3", received format - "flac". 3 of 4. 03 - Learning To Fly
-INFO - 16/03/2024 11:02:00 AM: 4 of 4 - Sting-Brand New Day
-INFO - 16/03/2024 11:02:00 AM: Conversion from the "D:\ֿנמדנאללû\Converter\Converter\TEST\test1" folder is done. Executed: 1, Unfulfilled (with errors): 3
-INFO - 16/03/2024 11:02:00 AM: Finish app.
+INFO - 16/03/2024 02:57:29 PM: Start app.
+WARNING - 16/03/2024 02:57:33 PM: Wrong format type.. Expected format - "wav", received format - "flac". 1 of 4. 01 - Shine On You Crazy Diamond Parts 1–5
+WARNING - 16/03/2024 02:57:33 PM: Wrong format type.. Expected format - "wav", received format - "flac". 2 of 4. 02 - Signs Of Life
+WARNING - 16/03/2024 02:57:33 PM: Wrong format type.. Expected format - "wav", received format - "flac". 3 of 4. 03 - Learning To Fly
+WARNING - 16/03/2024 02:57:33 PM: Wrong format type.. Expected format - "wav", received format - "mp3". 4 of 4. Sting-Brand New Day
+INFO - 16/03/2024 02:57:33 PM: All elements were converted with errors.
+INFO - 16/03/2024 02:57:33 PM: Conversion from the "D:/ֿנמדנאללû/Converter/Converter/TEST/test1" folder is done. Executed: 0, Unfulfilled (with errors): 4
+INFO - 16/03/2024 02:57:33 PM: Finish app.

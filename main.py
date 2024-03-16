@@ -4,7 +4,7 @@ from src.work_dirs.find_folder import out_folder, len_folder, find_folder
 from src.exceptions.exceptions import DirectoryAlreadyExistException
 import src.logger.logging_config as log
 from src.work_dirs.work_folders import make_dir
-from src.convert import converter
+from src.convert import Converter
 from src.parser import parse_arguments
 
 
@@ -36,8 +36,9 @@ def main():
 
     if not args.output_format:
         args.output_format = input('Enter output format: ')
+    converter = Converter()
 
-    converter(input_path, output_path, args.input_format, args.output_format, file_len)
+    converter.convert_from_dir(input_path, output_path, args.input_format, args.output_format, file_len)
 
 
 if __name__ == '__main__':

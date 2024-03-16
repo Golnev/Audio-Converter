@@ -31,7 +31,7 @@ def wrong_format_main(message: str):
 
 
 def wrong_format_type_log(expected_format: str, received_format: str, message: str, other_description=''):
-    logger.error(
+    logger.warning(
         f'{message}. Expected format - "{expected_format}", received format - "{received_format}". {other_description}'
     )
 
