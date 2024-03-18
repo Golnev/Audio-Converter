@@ -13,4 +13,5 @@ def make_dir(in_path, out_path):
 
 
 def remove_dir(path):
-    os.rmdir(path)
+    if path:
+        os.rmdir(path)

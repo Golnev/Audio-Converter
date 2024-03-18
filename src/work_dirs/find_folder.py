@@ -29,9 +29,16 @@ def out_folder(in_path: str) -> str:
     return f'{os.path.dirname(in_path)}\\{os.path.basename(in_path)}_CONV'
 
 
+def out_folder_from_files(in_paths: (str, ...)) -> str:
+    return f'{os.path.dirname(in_paths[0])}'
+
+
 def len_folder(in_path: str) -> int:
     return len([file for file in os.scandir(in_path) if file.is_file()])
 
 
 if __name__ == '__main__':
-    print(find_files())
+    input_file = find_files()
+    res = (out_folder_from_files(input_file))
+    print(res)
+

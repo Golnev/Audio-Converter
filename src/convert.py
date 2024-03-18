@@ -1,6 +1,6 @@
 import os
 import sys
-from typing import Literal
+from typing import Literal, Tuple
 
 from pydub import AudioSegment
 
@@ -19,7 +19,7 @@ class Converter:
         self.with_errors = 0
         self.executed = 0
 
-    def _check_format(self, format_from: type_formats_lit, format_to: type_formats_lit, output_path: str):
+    def _check_format(self, format_from: type_formats_lit, format_to: type_formats_lit, output_path: str = None):
         try:
             if format_from not in self.type_formats or format_to not in self.type_formats:
                 raise WrongFormatException
@@ -39,7 +39,7 @@ class Converter:
             sys.exit(1)
 
     @staticmethod
-    def _check_equal_format(format_from: type_formats_lit, format_to: type_formats_lit, output_path: str):
+    def _check_equal_format(format_from: type_formats_lit, format_to: type_formats_lit, output_path: str = None):
         try:
             if format_from == format_to:
                 raise EqualFormatTypesException
@@ -78,7 +78,18 @@ class Converter:
 
         self._end(input_path, output_path)
 
-    def _end(self, input_path, output_path):
+    def convert_files(self, input_files: Tuple[str, ...],
+                      output_path: str,
+                      format_from: type_formats_lit,
+                      format_to: type_formats_lit,
+                      count_files: int
+                      ):
+        self._check_format(format_from, format_to)
+        self._check_equal_format(format_from, format_to, output_path)
+        for file in input_files:
+            pass
+
+    def _end(self, input_path: str, output_path: str):
         if self.count == self.with_errors:
             log.logger.info('All elements were converted with errors.')
             remove_dir(output_path)
