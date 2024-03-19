@@ -87,12 +87,30 @@ class Converter:
         self._check_format(format_from, format_to)
         self._check_equal_format(format_from, format_to, output_path)
         for file in input_files:
-            pass
+            try:
+                if file.endswith('.' + format_from):
+                    out = output_path + '\\' + os.path.splitext(os.path.basename(file))[0] + '.' + format_to
+                    AudioSegment.from_file(file, format=format_from).export(out, format=format_to)
+                    self.count += 1
+                    self.executed += 1
+                else:
+                    self.count += 1
+                    self.with_errors += 1
+                    raise WrongFormatException
+            except WrongFormatException as e:
+                log.wrong_format_type_log(format_from, os.path.splitext(os.path.basename(file))[1][1:],
+                                          e.message, f'{self.count} of {count_files}. '
+                                                     f'{os.path.splitext(os.path.basename(file))[0]}')
+
+        self._end(os.path.dirname(input_files[0]), output_path)
 
     def _end(self, input_path: str, output_path: str):
         if self.count == self.with_errors:
             log.logger.info('All elements were converted with errors.')
-            remove_dir(output_path)
+            try:
+                remove_dir(output_path)
+            except OSError:
+                pass
 
         log.logger.info(
             f'Conversion from the "{input_path}" folder is done. '

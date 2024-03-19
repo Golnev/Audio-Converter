@@ -29,7 +29,7 @@ def main():
             log.directory_already_exist_log(os.path.basename(output_path), e.message)
             return
         converter.convert_from_dir(input_path, output_path, args.input_format, args.output_format, file_len)
-    else:
+    elif args.from_directory == 'window':
         input_path = find_folder()
         output_path = out_folder(input_path)
         file_len = len_folder(input_path)
@@ -45,7 +45,7 @@ def main():
         output_path = out_folder_from_files(input_files)
         count_files = len(input_files)
         converter.convert_files(input_files, output_path, args.input_format, args.output_format, count_files)
-    else:
+    elif args.path_files == 'window':
         input_files = find_files()
         output_path = out_folder_from_files(input_files)
         count_files = len(input_files)

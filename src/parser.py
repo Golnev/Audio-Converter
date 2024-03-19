@@ -20,7 +20,8 @@ def parse_arguments():
     args = parser.parse_args()
 
     if not (args.from_directory or args.path_files):
-        parser.error('At least one of --from_directory or --path_files must be provided')
+        args.path_files = 'window'
+
     elif args.from_directory and args.path_files:
         parser.error('Only one of --from_directory or --path_files can be provided')
 
